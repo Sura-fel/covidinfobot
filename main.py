@@ -23,9 +23,7 @@ Command : use
 """
 
 about_var = """
-Programmer : @met_asploit
-Graphics : @met_asploit
-manager : @met_asploit
+Programmer : <Me>
 """
 
 
