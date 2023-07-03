@@ -1,7 +1,7 @@
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from covid import Covid
-
+import config
 covid = Covid()
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -86,7 +86,7 @@ def error(update, context):
     logger.warning('Update "%s" cad error "%s"', update, context.error)
 
 def main():
-    updater = Updater("1155995106:AAGjHQuvE8jQeeAGVYlrQTSN-KNZydVpkyU", use_context=True)
+    updater = Updater(config.BOT_TOKEN, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", helps))
